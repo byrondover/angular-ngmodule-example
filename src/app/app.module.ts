@@ -4,24 +4,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 /* App Imports */
 import { AppComponent } from './app.component';
-import { TitleComponent } from './title.component';
-import { UserService } from './user.service';
+
+/* Core Modules */
+import { CoreModule } from './core/core.module';
 
 /* Routing Module */
 import { AppRoutingModule } from './app-routing.module';
 
-import { SharedModule } from './shared/shared.module';
-
 @NgModule({
   imports: [
     BrowserModule,
+    CoreModule.forRoot({ userName: 'Miss Marple' }),
     AppRoutingModule
   ],
-  declarations: [
-    AppComponent,
-    TitleComponent
-  ],
-  providers: [ UserService ],
+  declarations: [ AppComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

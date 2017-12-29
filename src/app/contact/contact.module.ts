@@ -5,19 +5,20 @@ import { FormsModule } from '@angular/forms';
 import { AwesomePipe } from './awesome.pipe';
 import { ContactComponent } from './contact.component';
 import { ContactHighlightDirective } from './contact-highlight.directive';
+import { ContactRoutingModule } from './contact-routing.module';
 import { ContactService } from './contact.service';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ContactRoutingModule
   ],
   declarations: [
     AwesomePipe,
     ContactComponent,
     ContactHighlightDirective
   ],
-  exports: [ ContactComponent ],
   providers: [ ContactService ]
 })
 export class ContactModule { }
